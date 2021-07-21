@@ -6,6 +6,6 @@
      echo ;
      echo ;
  done ;
-} \
-| \
-pandoc -s --toc -H gh-pandoc.css --webtex -o ml3d.html --metadata pagetitle="ML3D summary"
+} > 00\ Notes\ joined.md 
+  
+pandoc -s --toc -H gh-pandoc.css --webtex -o 00\ Notes\ joined.html --metadata pagetitle="ML3D summary" 00\ Notes\ joined.md

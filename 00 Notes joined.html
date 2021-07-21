@@ -1046,6 +1046,13 @@
 <li><a href="#approaches-with-lessno-supervision">Approaches with less/no supervision</a></li>
 <li><a href="#domain-adaption">Domain Adaption</a></li>
 </ul></li>
+<li><a href="#appendix-stuff-that-was-in-the-exercises">Appendix: stuff that was in the exercises</a>
+<ul>
+<li><a href="#exercise-1">Exercise 1</a></li>
+<li><a href="#exercise-2">Exercise 2</a></li>
+<li><a href="#exercise-3">Exercise 3</a></li>
+</ul></li>
+<li><a href="#ml3d-lecture-notes">ML3D-Lecture-Notes</a></li>
 </ul>
 </nav>
 <h1 id="geometric-foundations-surface-representations">01 - Geometric Foundations: Surface Representations</h1>
@@ -2096,5 +2103,60 @@
 <p>GAN: Generator should stylize the source image similar to the target image. Discrimnator tries to tell apart the images and also the extracted features. The source image and stylized source image should have semantically consistent features. Then goal: be able to use the same feature extractors from the source domain on the target domain.</p>
 <h4 id="domain-adaption-in-3d">Domain Adaption in 3D</h4>
 <p>No details here, but the same thing as for 2D applies: We have synthetic data that is labeled already, and want to use it for pretraining and then be able to apply the models to real data.</p>
+<h1 id="appendix-stuff-that-was-in-the-exercises">Appendix: stuff that was in the exercises</h1>
+<h2 id="exercise-1">Exercise 1</h2>
+<h5 id="generating-sdfs">1.1 Generating SDFs</h5>
+<h5 id="sdfs---occupancy-grids">1.2 SDFs -&gt; occupancy grids</h5>
+<h5 id="sdfs---meshes-marching-cubes">1.3 SDFs -&gt; meshes (marching cubes)</h5>
+<h5 id="manually-creating-.obj-files">1.4 Manually creating .obj files</h5>
+<h5 id="sampling-point-clouds-from-the-mesh-surface">1.5 Sampling point clouds from the mesh surface</h5>
+<h5 id="procrustes-rigid-shape-alignment">1.6 Procrustes rigid shape alignment</h5>
+<h2 id="exercise-2">Exercise 2</h2>
+<p>Dataset: shapenet.</p>
+<h5 id="simple-3d-cnn-in-pytorch">2.2 Simple 3D CNN in PyTorch</h5>
+<figure>
+<img src="simplenn.png" alt="simplenn.png" /><figcaption aria-hidden="true">simplenn.png</figcaption>
+</figure>
+<h5 id="dcnn-for-shape-classification">2.3 3DCNN for shape classification</h5>
+<p>Data: ShapeNetVox32 voxel grids (resolution: 32³)</p>
+<figure>
+<img src="3dcnn.png" alt="3dcnn.png" /><figcaption aria-hidden="true">3dcnn.png</figcaption>
+</figure>
+<h5 id="pointnet-for-shape-classification">2.4 PointNet for shape classification</h5>
+<p>Data: ShapeNetPointClouds</p>
+<figure>
+<img src="pointnet.png" alt="pointnet.png" /><figcaption aria-hidden="true">pointnet.png</figcaption>
+</figure>
+<p>Some details:</p>
+<ul>
+<li>shared MLPs as 1d convs with kernel size 1</li>
+<li>mlp(64, 64) means two mlps with output size 64 each</li>
+<li>one head is for classification, another head is for part segmentation</li>
+<li>After all layers except the final classification layer: ReLUs and Batch norms</li>
+<li>Classification head: additional dropout between second linear layer and batch norm</li>
+<li>TNet: “basically small point net” (TODO: look at code again)</li>
+</ul>
+<h5 id="pointnet-for-part-segmentation">2.5 PointNet for part segmentation</h5>
+<p>Data: ShapeNetPart</p>
+<p>Like above, but now with segmentation head. The segmentation head takes a global feature vector concatenated with point-level feature vectors and applies shared mlps.</p>
+<h2 id="exercise-3">Exercise 3</h2>
+<h5 id="d-epn-for-shape-reconstruction">3.1 3D-EPN for shape reconstruction</h5>
+<p>Data: SDF and DF grids (incomplete input data/complete target data) at resolution 32³, provided by the 3D-EPN authors.</p>
+<p>Goal: scan completion. <img src="3depn_teaser.png" alt="3depn_teaser.png" /></p>
+<figure>
+<img src="3depn.png" alt="3depn.png" /><figcaption aria-hidden="true">3depn.png</figcaption>
+</figure>
+<p>Architecture: 3D-Unet encoder/decoder structure (we skipped the classification network part).</p>
+<h5 id="deepsdf-for-3d-reconstruction">3.2 DeepSDF for 3D reconstruction</h5>
+<p>Data: point clouds with sdf values, prepared by the paper authors; also, the mesh representation.</p>
+<figure>
+<img src="deepsdf_teaser.png" alt="deepsdf_teaser.png" /><figcaption aria-hidden="true">deepsdf_teaser.png</figcaption>
+</figure>
+<figure>
+<img src="deepsdf_architecture.png" alt="deepsdf_architecture.png" /><figcaption aria-hidden="true">deepsdf_architecture.png</figcaption>
+</figure>
+<h1 id="ml3d-lecture-notes">ML3D-Lecture-Notes</h1>
+<p>My notes for the ML3D Lecture at TUM by Prof. Angela Dai.</p>
+<p>Files for chapters are in <a href="/">Obsidian markdown</a><code>with all chapters joined that can be viewed on github (no LaTeX support on GitHub), and a corresponding HTML file</code>00 Notes joined.html` which includes LaTeX formulas.</p>
 </body>
 </html>

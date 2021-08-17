@@ -30,7 +30,7 @@ Avoid spreading sparse information to dense via convolution
 Submanifold sparse convolutions operate basically only close to the surface (details?)
 * memory-efficient; uses hashing
 * significant performance improvement (e.g. room-scale @1-2cm now possible)
-* See: `MinkowskiImage`
+* See: `MinkowskiEngine`
 
 (Slight) disadvantage: close points in euclidean space can be far removed in geodesic distance or even disconnected, in this case no information propagation by subman. sparse conv. is possible.
 
@@ -51,7 +51,7 @@ Advantage: can use fine-tuning on huge available 2D image datasets (which are no
 
 Put in multiple images from the same object, put them through CNN. Idea: maybe one view is surer than another, and can provide more information.
 
-Actually outperforms approaches with 3D inputs because of more training data.
+Actually outperforms approaches with 3D inputs because of more training data. (Note: possibly only back then, not now)
 
 ![[mvcnn.png]]
 

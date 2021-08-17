@@ -1,4 +1,4 @@
-# 07 - Semantic Scene Segmentation
+# 07 - Semantic Scene Understanding: Semantic Segmentation
 3D Semantic segmentation: segment scene (e.g. room) in semantic parts (e.g. for each part: to which furniture type it belongs)
 
 ### Popular Benchmarks

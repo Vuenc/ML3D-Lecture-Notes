@@ -1,4 +1,6 @@
-# ML3D-Lecture-Notes
-My notes for the ML3D Lecture at TUM by Prof. Angela Dai.
+# About these notes
+These notes are my lecture notes on the Machine Learning for 3D Geometry course held in the summer term 2021 by Prof. Angela Dai. The notes are based on the course slides [^1]. Images are taken from the course slides and related research papers which are referenced in the notes.
 
-Files for chapters are in [Obsidian markdown](https://obsidian.md/), and the project is best viewed as Obsidian vault. I also included a markdown file `00 Notes joined.md` with all chapters joined that can be viewed on github (no LaTeX support on GitHub), and a corresponding HTML file `00 Notes joined.html` which includes LaTeX formulas.
+The notes are written in [Obsidian markdown](https://obsidian.md/) and are best viewed in Obsidian.
+
+[^1]: Angela Dai, Christian Diller, Yawar Siddiqui -- Machine Learning for 3D Geometry, lecture slides, summer term 2021

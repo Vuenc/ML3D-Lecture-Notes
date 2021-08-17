@@ -79,7 +79,7 @@ Segment per object; find similar parts accross objects (clustering) -> end resul
 Drawback: uses handcrafted features.
 
 ##### BAE-NET: Branched Autoencoder for Shape Co-Segmentation [Chen et al. ’19]
-*Branched autoencoder*. Reconstruct each part of the shape. Intuition: apprarently the autoencoder does not only learn good features for reconstructing the whole thing, but also for reconstructing/segmenting the parts.
+*Branched autoencoder*. Reconstruct each part of the shape. Intuition: apparently the autoencoder does not only learn good features for reconstructing the whole thing, but also for reconstructing/segmenting the parts.
 
 ##### AdaCoSeg: Weakly Supervised Co-Segmentation [Zhu et al. '20]
 Train 

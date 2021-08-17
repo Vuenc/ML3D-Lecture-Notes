@@ -103,7 +103,7 @@ One way to compute something like this: *near isometries preserve local structur
 
 #### Intrinsic similarity measures
 ##### Gromov-Hausdorff distance
-The *Hausdorff distance* between two point sets is the *maximum of all minimum distances* $\max_p min_{q} d(p, q)$.
+The *Hausdorff distance* between two point sets is the *maximum of all minimum distances* $\max_p \min_{q} d(p, q)$.
 
 The *Gromov-Hausdorff distance* is the infimum of Hausdorff distances over all mappings/correspondences.
 
